@@ -20,12 +20,12 @@ A modern starter template featuring:
 ```bash
 git clone https://github.com/meleayi/NextAuthUsingDrizzleNeon.git
 cd your-repo
-
+```
 
 ## Install Dependancies
 ```bash
 npm install
-
+```
 
 ## Set up environment variables
 Create .env file:
@@ -35,7 +35,7 @@ DATABASE_URL="postgresql://user:password@ep-cool-name.neon.tech/neondb?sslmode=r
 AUTH_SECRET=$(openssl rand -hex 32)
 NEXTAUTH_URL="http://localhost:3000"
 
-
+```
 ## Database Setup
 
 ```bash
@@ -44,3 +44,4 @@ npm run db:migrate
 
 ## Run development server
 npm run dev
+```
