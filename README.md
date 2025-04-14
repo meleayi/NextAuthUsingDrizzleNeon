@@ -1,8 +1,5 @@
 # Next.js PostgreSQL Starter with Drizzle ORM
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Next.js](https://img.shields.io/badge/Next.js-14.0+-000000?logo=next.js)](https://nextjs.org/)
-[![Drizzle ORM](https://img.shields.io/badge/Drizzle%20ORM-0.29+-FFD43B?logo=postgresql)](https://orm.drizzle.team)
 
 A modern starter template featuring:
 - Next.js App Router
@@ -21,5 +18,29 @@ A modern starter template featuring:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/meleayi/NextAuthUsingDrizzleNeon.git
 cd your-repo
+
+
+## Install Dependancies
+```bash
+npm install
+
+
+## Set up environment variables
+Create .env file:
+
+```bash
+DATABASE_URL="postgresql://user:password@ep-cool-name.neon.tech/neondb?sslmode=require"
+AUTH_SECRET=$(openssl rand -hex 32)
+NEXTAUTH_URL="http://localhost:3000"
+
+
+## Database Setup
+
+```bash
+npx drizzle-kit generate:pg
+npm run db:migrate
+
+## Run development server
+npm run dev
