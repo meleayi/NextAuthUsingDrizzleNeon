@@ -1,0 +1,65 @@
+this project done with Next.js and postgress database
+the database in Neon 
+the URL of neon is https://neon.tech/
+
+Steps to use Neon is 
+1. first must be create an account
+2. login into the system 
+3. then create the project
+    3.1 fill the form Project Name, Database Name, select the version that you want to done
+    3.2  select the region you can leave as it is the default but the recommended way is select the region closest to you, because the database access from that region.
+4. create the database using prisma, but for this section we use Drizzle ORM
+    4.1 Step 1: Set Up Prisma Install Prisma CLI if not already installed:
+        npm install prisma --save-dev
+    4.2 Initialize Prisma with PostgreSQL:
+        npx prisma init --datasource-provider postgresql
+    4.3 configure prisma
+        Update your prisma/schema.prisma file:
+    4.4 Define Your Models
+    4.5 Install Prisma Client
+        npm install @prisma/client
+    4.6 Push Schema to Database
+        npx prisma migrate dev --name init
+    4.7 For production:
+        npx prisma migrate deploy
+    4.8 Generate Prisma Client
+        npx prisma generate
+    4.9 Create a Prisma Client Instance
+        Create lib/prisma.ts
+5 Lets see in deep Drizzle ORM how it works , in this section we uses this ORM  
+    5.1 lets visit the site first   
+        https://orm.drizzle.team
+    5.2 ceate an account and then login into the system, then
+        visit this site https://orm.drizzle.team/docs/overview
+    5.3 after logging into the system select the Database Type(for now we select neon postgress)
+    5.4 after selecting then installation stem somes
+        npm install drizzle-orm postgres
+        npm install -D drizzle-kit dotenv 
+    5.5 Update the .env file
+       NEON_DATABASE_URL="postgresql://user:password@ep-cool-name-123456.us-east-2.aws.neon.tech/neondb?sslmode=require"
+    5.6 then ceate one folder which is DB
+    5.6 inside this table create drize.ts file
+    5.7 create drizzle.config.ts file and configer it
+    5.8 finally run the drizzle 
+        npx drizzle-kit generate
+6. Authentication 
+    6.1 We use in this section Auth.js it is the same as next auth
+        authjs.dev  this is the URL what we do in the next lesson
+    6.2 select the framework you are working on , in this lesson we select next, then install the auth
+        npx install next-auth@beta
+    6.3 next install the secret to generate secret code in enviroment variable
+        npx auth secret ---- default name is AUTH_SECRET
+    6.4 next move into the configration section
+        create auth.ts file in the root of the app
+        add the necessary configration --->use documentation
+    6.5
+
+
+        
+
+
+
+
+
+
+
